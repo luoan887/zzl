@@ -33,12 +33,22 @@ build/
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 .venv/
 venv/
+env/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
 *.egg-info/
+.eggs/
+*.egg
+htmlcov/
+.coverage
+coverage.xml
+pip-wheel-metadata/
 
 # Go
 bin/

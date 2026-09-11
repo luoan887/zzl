@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zzl"
+version = "0.1.0"
+description = "Personal Python project scaffold"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "luoan887" }]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+zzl = "zzl.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zzl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -4,7 +4,7 @@
 
 ## 简介
 
-本仓库目前是占位与脚手架，后续会在此迭代实际项目代码。技术栈待定。
+这是一个使用 **src-layout** 的最小 Python 项目脚手架（包名 `zzl`，Python >= 3.11）。后续可在此迭代实际功能。
 
 ## 快速开始
 
@@ -13,7 +13,32 @@ git clone https://github.com/luoan887/zzl.git
 cd zzl
 ```
 
-具体运行方式会在选定技术栈后补充。
+### 安装
+
+建议使用虚拟环境后以可编辑模式安装：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+```
+
+仅安装运行时依赖可用 `pip install -e .`。
+
+### 运行
+
+安装后可通过模块或控制台脚本启动（会打印 hello / 版本）：
+
+```bash
+python -m zzl
+zzl
+```
+
+### 测试
+
+```bash
+pytest
+```
 
 ## 目录结构
 
@@ -22,10 +47,16 @@ cd zzl
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── pyproject.toml
 ├── docs/
 │   └── notes.md
-└── src/
-    └── .gitkeep
+├── src/
+│   └── zzl/
+│       ├── __init__.py
+│       ├── __main__.py
+│       └── cli.py
+└── tests/
+    └── test_smoke.py
 ```
 
 ## 开发
